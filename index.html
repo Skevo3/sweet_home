@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сладкий дом</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #FFEED9;
+      color: #AA4924;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo__img {
+      width: 95px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px; /* промежуток между пунктами */
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #AA4924;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .main {
+      padding: 40px 0;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center; /* центр hero */
+      align-items: center;
+      gap: 120px; /* расстояние между блоками */
+      margin-bottom: 60px;
+    }
+
+    .hero__title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero__subtitle {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hero__description {
+      max-width: 400px;
+    }
+
+    .hero__image img {
+      width: 290px;
+    }
+
+    .section__title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .products__grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      width: 30%;
+      text-align: center;
+    }
+
+    .product__img {
+      width: 75%;
+      border-radius: 10px;
+    }
+
+    .product__name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background-color: #F9A875;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .advantages__grid {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .advantage__icon {
+      width: 80px;
+      margin-bottom: -20px; /* подвинуть иконку */
+    }
+
+    .footer {
+      background-color: #FCDDBC;
+      padding: 30px 0 10px;
+      color: #AA4924;
+    }
+
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__img {
+      width: 110px;
+    }
+
+    .footer__socials {
+      display: flex;
+      justify-content: center;
+      transform: translate(60px, 25px); /* смещение соцсетей */
+    }
+
+    .footer__socials img {
+      width: 40px;
+      margin: 0 25px;
+      filter: brightness(0) saturate(100%) invert(27%) sepia(47%) saturate(1041%) hue-rotate(338deg) brightness(95%) contrast(92%);
+    }
+
+    .footer__bottom {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero__image img {
+        width: 200px;
+        margin-top: 20px;
+      }
+
+      .hero__title {
+        font-size: 28px;
+      }
+
+      .hero__subtitle {
+        font-size: 20px;
+      }
+
+      .products__grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product {
+        width: 80%;
+      }
+
+      .advantages__grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .advantage__icon {
+        width: 60px;
+        margin-bottom: 10px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 20px; /* адаптивный промежуток */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Логотип Сладкий Дом" class="logo__img" />
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="products.html" class="nav__link">О продукции</a>
+        <a href="feedback.html" class="nav__link">Обратная связь</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+        <a href="register.html" class="nav__link">Регистрация</a>
+        <a href="login.html" class="nav__link">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero container">
+      <div class="hero__text">
+        <!-- заголовок и описание hero -->
+        <h1 class="hero__title">Сладкий дом</h1>
+        <p class="hero__subtitle">Лучшие десерты <br> для вас</p>
+        <p class="hero__description">Мы создаем свою продукцию из отборных натуральных ингредиентов, чтобы радовать вас восхитительной и изысканной выпечкой</p>
+      </div>
+      <div class="hero__image">
+        <!-- фото торта -->
+        <img src="images/cake.png" alt="Шоколадный торт" />
+      </div>
+    </section>
+
+    <section class="products container">
+      <h2 class="section__title">Популярные товары</h2>
+      <div class="products__grid">
+        <!-- карточки товара -->
+        <div class="product">
+          <img src="images/milk-chocolate.jpg" alt="Молочный шоколад" class="product__img" />
+          <p class="product__name">Молочный шоколад</p>
+        </div>
+        <div class="product">
+          <img src="images/praline.jpg" alt="Ореховые пралине" class="product__img" />
+          <p class="product__name">Ореховые пралине</p>
+        </div>
+        <div class="product">
+          <img src="images/lemon-marmalade.jpg" alt="Лимонный мармелад" class="product__img" />
+          <p class="product__name">Лимонный мармелад</p>
+        </div>
+      </div>
+      <div class="products__button" style="text-align: center">
+        <a href="products.html" class="btn">Все товары</a>
+      </div>
+    </section>
+
+    <section class="advantages container">
+      <h2 class="section__title">Наши преимущества</h2>
+      <div class="advantages__grid">
+        <!-- преимущества -->
+        <div class="advantage">
+          <img src="images/icon-natural.png" alt="Натуральные ингредиенты" class="advantage__icon" />
+          <p class="advantage__text">Натуральные ингредиенты</p>
+        </div>
+        <div class="advantage">
+          <img src="images/icon-delivery.png" alt="Быстрая доставка" class="advantage__icon" />
+          <p class="advantage__text">Быстрая доставка</p>
+        </div>
+        <div class="advantage">
+          <img src="images/icon-discount.png" alt="Выгодные предложения" class="advantage__icon" />
+          <p class="advantage__text">Выгодные предложения</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__logo">
+        <!-- лого в футере -->
+        <img src="images/logo.png" alt="Логотип Сладкий дом" class="footer__img" />
+      </div>
+      <div class="footer__socials">
+        <!-- соцсети -->
+        <a href="#"><img src="images/vk.svg" alt="VK"></a>
+        <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+      </div>
+      <div class="footer__contacts">
+        <!-- контакты -->
+        <p>г. Москва<br>Профсоюзная ул. 56, этаж 1<br>+7 (300) 111-11-11<br>isip_d.v.cherkasov@mpt.ru</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2025 Сладкий Дом. Все права защищены.</div>
+  </footer>
+</body>
+</html>

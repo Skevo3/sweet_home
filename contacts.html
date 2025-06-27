@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сладкий Дом — Контакты</title>
+  <!-- Шрифт для заголовка -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #FFF5E8;
+      color: #AA4924;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+      background-color: #FFF5E8;
+    }
+
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo__img {
+      width: 95px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px; /* промежуток ссылок */
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #AA4924;
+      font-weight: bold;
+    }
+
+    .main {
+      padding: 60px 16px;
+      text-align: center;
+    }
+
+    .main h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .contacts__info {
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .info-block {
+      background: #FCDDBC;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .info-block img {
+      width: 30px;
+    }
+
+    .contacts__map-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contacts__map iframe {
+      width: 520px;
+      height: 390px;
+      border: none;
+      border-radius: 15px;
+    }
+
+    .contacts__socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* промежуток соцсетей */
+    }
+
+    .contacts__socials img {
+      width: 40px;
+      filter: brightness(0) saturate(100%) invert(27%) sepia(47%) saturate(1041%) hue-rotate(338deg) brightness(95%) contrast(92%);
+    }
+
+    .footer {
+      background-color: #FCDDBC;
+      padding: 30px 0 10px;
+      color: #AA4924;
+    }
+
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__img {
+      width: 110px;
+    }
+
+    .footer__socials {
+      display: flex;
+      justify-content: center;
+      transform: translate(60px, 25px); /* сдвиг иконок */
+    }
+
+    .footer__socials img {
+      width: 40px;
+      margin: 0 25px;
+      filter: brightness(0) saturate(100%) invert(27%) sepia(47%) saturate(1041%) hue-rotate(338deg) brightness(95%) contrast(92%);
+    }
+
+    .footer__bottom {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .header__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* для мобилки */
+      }
+
+      .contacts {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contacts__map iframe {
+        width: 100%;
+        height: 300px; /* адаптив карты */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Логотип Сладкий Дом" class="logo__img">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="products.html">О продукции</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Контакты</h1>
+    <div class="contacts">
+      <div class="contacts__info">
+        <!-- блоки с адресом, телефоном, email -->
+        <div class="info-block">
+          <img src="images/location.png" alt="Адрес">
+          <div>
+            <strong>Наш адрес</strong><br>
+            Профсоюзная ул. 56, пекарня «Сладкий Дом»
+          </div>
+        </div>
+        <div class="info-block">
+          <img src="images/phone.png" alt="Телефон">
+          <div>
+            <strong>Телефон</strong><br>
+            +7 (300) 111-11-11
+          </div>
+        </div>
+        <div class="info-block">
+          <img src="images/email.png" alt="Email">
+          <div>
+            <strong>Email</strong><br>
+            isip_d.v.cherkasov@mpt.ru
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts__map-block">
+        <!-- карта и соцсети -->
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.553684%2C55.669973&z=21&mode=poi&poi%5Bpoint%5D=37.553442%2C55.669983" allowfullscreen></iframe>
+        </div>
+        <div class="contacts__socials">
+          <a href="#"><img src="images/vk.svg" alt="VK"></a>
+          <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+          <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__logo">
+        <img src="images/logo.png" alt="Логотип Сладкий Дом" class="footer__img" />
+      </div>
+      <div class="footer__socials">
+        <a href="#"><img src="images/vk.svg" alt="VK"></a>
+        <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+      </div>
+      <div class="footer__contacts">
+        <p>г. Москва<br>Профсоюзная ул. 56, пекарня «Сладкий Дом»<br>+7 (300) 111-11-11<br>isip_d.v.cherkasov@mpt.ru</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2025 Сладкий Дом. Все права защищены.</div>
+  </footer>
+</body>
+</html>

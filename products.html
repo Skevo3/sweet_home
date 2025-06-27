@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сладкий Дом — Наша продукция</title>
+  <!-- шрифт для заголовков -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: #FFEED9;
+      color: #AA4924;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo__img {
+      width: 95px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px; /* промежуток между ссылками */
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #AA4924;
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px; /* сетка товаров */
+      padding: 40px 16px;
+    }
+
+    .product-card {
+      padding: 16px;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    .product-card img {
+      width: 260px; /* размер фото */
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* тень у карточки */
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #F9A875;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background: #D86C52;
+    }
+
+    .footer {
+      background-color: #FCDDBC;
+      padding: 30px 0 10px;
+      color: #AA4924;
+    }
+
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__img {
+      width: 110px;
+    }
+
+    .footer__socials {
+      display: flex;
+      justify-content: center;
+      transform: translate(60px, 25px); /* смещение иконок */
+    }
+
+    .footer__socials img {
+      width: 40px;
+      margin: 0 25px;
+      filter: brightness(0) saturate(100%) invert(27%) sepia(47%) saturate(1041%) hue-rotate(338deg) brightness(95%) contrast(92%);
+    }
+
+    .footer__bottom {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Сладкий Дом" class="logo__img">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="products.html">О продукции</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Наша продукция</h1>
+    <section class="products">
+      <!-- карточки товаров -->
+      <div class="product-card">
+        <img src="images/milk-chocolate.jpg" alt="Молочный шоколад">
+        <h3>Молочный шоколад<br>220 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/caramel-candy.jpg" alt="Карамельные леденцы">
+        <h3>Карамельные леденцы<br>150 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/lemon-marmalade.jpg" alt="Лимонный мармелад">
+        <h3>Лимонный мармелад<br>250 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/strawberry-biscuit.jpg" alt="Бисквит с клубничной глазурью">
+        <h3>Бисквит с клубничной глазурью<br>270 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/praline.jpg" alt="Ореховые пралине">
+        <h3>Ореховые пралине<br>350 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/gingerbread.jpg" alt="Имбирные человечки">
+        <h3>Имбирные человечки<br>200 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/jam-cookie.jpg" alt="Песочное печенье с вареньем">
+        <h3>Песочное печенье с вареньем<br>180 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/berry-cheesecake.jpg" alt="Чизкейк с ягодами">
+        <h3>Чизкейк с ягодами<br>720 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+      <div class="product-card">
+        <img src="images/cherry-cupcake.jpg" alt="Капкейк с кремом и вишней">
+        <h3>Капкейк с кремом и вишней<br>160 ₽</h3>
+        <button class="buy-btn">Купить</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__logo">
+        <img src="images/logo.png" alt="Логотип Сладкий дом" class="footer__img" />
+      </div>
+      <div class="footer__socials">
+        <a href="#"><img src="images/vk.svg" alt="VK"></a>
+        <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+      </div>
+      <div class="footer__contacts">
+        <p>г. Москва<br>Профсоюзная ул. 56, этаж 1<br>+7 (300) 111-11-11<br>isip_d.v.cherkasov@mpt.ru</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2025 Сладкий Дом. Все права защищены.</div>
+  </footer>
+
+  <script>
+    // проверка авторизации и редирект по кнопке "Купить"
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    document.querySelectorAll('.buy-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        if (isLoggedIn) {
+          window.location.href = 'profile.html';
+        } else {
+          window.location.href = 'register.html';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

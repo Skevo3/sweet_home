@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сладкий Дом — Обратная связь</title>
+  <!-- Шрифт заголовка -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #FFEED9;
+      color: #AA4924;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { display: flex; align-items: center; }
+    .logo__img { width: 95px; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px; /* промежуток ссылок */
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #AA4924;
+      font-weight: bold;
+    }
+
+    .main {
+      padding: 60px 16px;
+      text-align: center;
+    }
+
+    .main h1 { font-size: 32px; margin-bottom: 40px; }
+
+    .form {
+      background: #FFE5C2;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .form label {
+      display: block;
+      width: 85%;
+      margin: 0 auto 5px auto;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .form input,
+    .form textarea {
+      width: 85%;
+      padding: 10px;
+      margin: 0 auto 20px auto;
+      display: block;
+      border: 2px solid #F68C40;
+      border-radius: 5px;
+      background: #FFEED9;
+    }
+
+    .form button {
+      width: 85%;
+      padding: 12px;
+      background-color: #F9A875;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form button:hover { background-color: #D86C52; }
+
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+      display: none;
+      color: green;
+    }
+
+    .error {
+      margin-top: 20px;
+      font-weight: bold;
+      display: none;
+      color: red;
+    }
+
+    .footer {
+      background-color: #FCDDBC;
+      padding: 30px 0 10px;
+      color: #AA4924;
+    }
+
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__img { width: 110px; }
+
+    .footer__socials {
+      display: flex;
+      justify-content: center;
+      transform: translate(60px, 25px); /* сдвиг иконок соцсетей */
+    }
+
+    .footer__socials img {
+      width: 40px;
+      margin: 0 25px;
+      filter: brightness(0) saturate(100%) invert(27%) sepia(47%) saturate(1041%) hue-rotate(338deg) brightness(95%) contrast(92%);
+    }
+
+    .footer__bottom {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 20px; /* для мобилки */
+      }
+
+      .nav a { margin: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Логотип Сладкий Дом" class="logo__img">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="products.html">О продукции</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Обратная связь</h1>
+    <!-- форма обратной связи -->
+    <form class="form" id="feedbackForm" action="php/feedback.php" method="POST">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" placeholder="Введите имя">
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Введите e-mail">
+
+      <label for="message">Сообщение</label>
+      <textarea id="message" name="message" rows="4" placeholder="Введите сообщение"></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+    <div class="message" id="successMsg">Ваше сообщение отправлено!</div>
+    <div class="error" id="errorMsg"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__logo">
+        <img src="images/logo.png" alt="Логотип Сладкий Дом" class="footer__img" />
+      </div>
+      <div class="footer__socials">
+        <a href="#"><img src="images/vk.svg" alt="VK"></a>
+        <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+      </div>
+      <div class="footer__contacts">
+        <p>г. Москва<br>Профсоюзная ул. 56, этаж 1<br>+7 (300) 111-11-11<br>isip_d.v.cherkasov@mpt.ru</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2025 Сладкий Дом. Все права защищены.</div>
+  </footer>
+
+  <script>
+    // Показываем сообщения по параметру URL
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('success')) {
+      document.getElementById('successMsg').style.display = 'block';
+    }
+    if (params.get('error') === 'empty') {
+      const err = document.getElementById('errorMsg');
+      err.textContent = 'Пожалуйста, заполните все поля.';
+      err.style.display = 'block';
+    }
+    if (params.get('error') === 'email') {
+      const err = document.getElementById('errorMsg');
+      err.textContent = 'Введите корректный email.';
+      err.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
